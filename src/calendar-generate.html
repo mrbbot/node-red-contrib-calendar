@@ -1,0 +1,42 @@
+<script type="text/javascript">
+    RED.nodes.registerType("calendar-generate", {
+        category: "calendar",
+        color: "#C7E9C0",
+        defaults: {
+            name: {value: ""},
+            domain: {value: ""},
+            product: {value: ""},
+            language: {value: "EN"}
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "font-awesome/fa-calendar-plus-o",
+        label: function () {
+            return this.name || "generate";
+        },
+        paletteLabel: "generate"
+    });
+</script>
+
+<script type="text/x-red" data-template-name="calendar-generate">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-domain"><i class="icon-globe"></i> Domain</label>
+        <input type="text" id="node-input-domain" placeholder="example.com">
+    </div>
+    <div class="form-row">
+        <label for="node-input-product"><i class="icon-tag"></i> Product</label>
+        <input type="text" id="node-input-product" placeholder="Product">
+    </div>
+    <div class="form-row">
+        <label for="node-input-language"><i class="icon-flag"></i> Language</label>
+        <input type="text" id="node-input-language" placeholder="Language">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="calendar-generate">
+    <p>A node that generates an iCal calendar from events in the message payload</p>
+</script>

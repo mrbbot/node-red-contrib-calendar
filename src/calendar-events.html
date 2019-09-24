@@ -1,0 +1,32 @@
+<script type="text/javascript">
+    RED.nodes.registerType("calendar-events", {
+        category: "calendar",
+        color: "#C7E9C0",
+        defaults: {
+            name: {value: ""},
+            url: {value: "", required: true},
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "font-awesome/fa-calendar",
+        label: function () {
+            return this.name || "events";
+        },
+        paletteLabel: "events"
+    });
+</script>
+
+<script type="text/x-red" data-template-name="calendar-events">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-url"><i class="icon-globe"></i> URL</label>
+        <input type="text" id="node-input-url" placeholder="http://">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="calendar-events">
+    <p>A node that gets all the events from the specified calendar URL</p>
+</script>

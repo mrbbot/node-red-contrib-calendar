@@ -1,0 +1,31 @@
+{
+  "name": "node-red-contrib-calendar",
+  "version": "1.0.0",
+  "description": "Node-RED nodes for working with iCal files",
+  "main": "index.js",
+  "dependencies": {
+    "ical-generator": "^1.8.1",
+    "node-ical": "^0.9.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "node-red": {
+    "nodes": {
+      "calendar-events": "src/calendar-events.js",
+      "calendar-generate": "src/calendar-generate.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrbbot/node-red-contrib-calendar.git"
+  },
+  "keywords": ["node", "red", "calendar"],
+  "author": "MrBBot",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mrbbot/node-red-contrib-calendar/issues"
+  },
+  "homepage": "https://github.com/mrbbot/node-red-contrib-calendar#readme"
+}
